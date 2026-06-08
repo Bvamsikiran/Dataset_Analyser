@@ -1,5 +1,5 @@
-#Abstract
-##Problem Statement:
+# Abstract
+## Problem Statement:
 
 * Many modern software tools can analyze datasets and generate plots through  
 * simple code or commands. However, they often lack dynamic, interactive  	* engagement—such as explanatory messages after detecting skewness (e.g.,     * "right-skewed distribution")—and miss a clear, guided workflow. Users must 
@@ -9,7 +9,7 @@
 * structured framework/architecture for execution, learning, and comprehensive 
 * dataset understanding.
 
-##Objectives:
+## Objectives:
 
 * Develop a software model that uses built-in functions to automatically provide key dataset characteristics, summary statistics, and concise explanatory messages in a single run.
 * Compute simple correlations (all variable pairs), multiple correlations, identify linear/non-linear relationships, partial/total correlations; output max/min values with interactive text messages for motivation, scatter plots for visualization, and prompts for Pearson/Kendall/Spearman methods (including advantages/disadvantages for each).
