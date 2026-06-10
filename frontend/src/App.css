@@ -1,0 +1,555 @@
+/* =====================================================
+   DATASET ANALYSER - DARK-THEMED RESPONSIVE STYLES
+   ===================================================== */
+
+/* ==================== COLOR PALETTE ====================
+   Primary: #6366f1 (Indigo)
+   Secondary: #ec4899 (Pink)
+   Success: #10b981 (Green)
+   Warning: #f59e0b (Amber)
+   Error: #ef4444 (Red)
+   Dark BG: #0f0f23
+   Dark Secondary: #1a0033
+   Text Primary: #e0e0e0
+   Text Secondary: #b0b0b0
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== GENERAL STYLES ====================*/
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 0, 51, 0.95) 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== HEADER ====================*/
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+.file-info {
+  font-size: 0.9rem;
+  color: #10b981;
+  margin-top: 10px;
+}
+
+/* ==================== UPLOAD STATE ====================*/
+
+.upload-container {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-zone {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border: 3px dashed rgba(99, 102, 241, 0.5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(99, 102, 241, 0.05);
+  margin: 30px 0;
+}
+
+.upload-zone:hover {
+  border-color: rgba(99, 102, 241, 1);
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateY(-5px);
+}
+
+.upload-zone.dragover {
+  border-color: rgba(236, 72, 153, 1);
+  background: rgba(236, 72, 153, 0.15);
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.upload-zone h2 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.upload-zone p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.upload-zone .file-types {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* ==================== PREVIEW STATE ====================*/
+
+.preview-container {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dataset-table-wrapper {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 30px 0;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.dataset-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.dataset-table thead {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+  position: sticky;
+  top: 0;
+}
+
+.dataset-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #6366f1;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.column-badge {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.dataset-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  color: #e0e0e0;
+}
+
+.dataset-table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.dataset-table tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== CONFIGURE STATE ====================*/
+
+.configure-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.config-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.column-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.column-selector label {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.column-selector select {
+  padding: 12px 15px;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  background: rgba(15, 15, 35, 0.6);
+  color: #e0e0e0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.column-selector select:hover {
+  border-color: rgba(99, 102, 241, 0.7);
+  background: rgba(15, 15, 35, 0.8);
+}
+
+.column-selector select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.formula-display {
+  background: rgba(99, 102, 241, 0.1);
+  border-left: 4px solid #6366f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.formula-display p {
+  color: #e0e0e0;
+  margin: 8px 0;
+}
+
+.formula-display code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #a8dadc;
+  font-family: 'Courier New', monospace;
+}
+
+/* ==================== VISUALIZE STATE ====================*/
+
+.visualize-container {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.visualization-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  margin: 30px 0;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .visualization-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-panel {
+    order: -1;
+  }
+}
+
+.chart-area {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  min-height: 400px;
+}
+
+.metrics-panel {
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.metrics-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #10b981;
+  font-family: 'Courier New', monospace;
+}
+
+.metric-explanation {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+.equation-box {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.equation-box strong {
+  display: block;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.equation-box code {
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  border-radius: 6px;
+  color: #a8dadc;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+/* ==================== BUTTONS ====================*/
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 30px 0 0 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+  border: 2px solid rgba(99, 102, 241, 0.5);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: rgba(99, 102, 241, 0.3);
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==================== STATUS MESSAGES ====================*/
+
+.loading {
+  padding: 20px;
+  background: rgba(100, 200, 255, 0.1);
+  border-left: 4px solid rgba(100, 200, 255, 0.8);
+  border-radius: 8px;
+  color: rgba(100, 200, 255, 0.9);
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.error-message {
+  padding: 20px;
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid rgba(239, 68, 68, 0.8);
+  border-radius: 8px;
+  color: rgba(239, 68, 68, 0.9);
+  margin-top: 20px;
+  animation: slideInUp 0.3s ease-out;
+}
+
+/* ==================== RESPONSIVE ====================*/
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .dataset-table {
+    font-size: 0.85rem;
+  }
+
+  .dataset-table th,
+  .dataset-table td {
+    padding: 10px;
+  }
+
+  .metrics-panel {
+    position: static;
+  }
+
+  .visualization-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    border-radius: 12px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .upload-zone {
+    height: 250px;
+  }
+
+  .upload-icon {
+    font-size: 3rem;
+  }
+
+  .upload-zone h2 {
+    font-size: 1.2rem;
+  }
+
+  .column-selector label {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==================== SCROLLBAR STYLING ====================*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
