@@ -1,6 +1,6 @@
 {
   "name": "dataset-analyser-frontend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Frontend for Dataset Analyser Pipeline - Phase 1",
   "private": true,
   "type": "module",
